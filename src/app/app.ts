@@ -8,5 +8,15 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('basesAngular');
+  title = signal('El INCREIBLE');
+  duplicarNumero(valor:number):number{
+    return valor * 2;
+}
+
+pelicula={
+  titulo:"El señor de los anillos",
+  fechaLanzamiento:new Date,
+  director:"Peter Jackson"
+}
+
 }

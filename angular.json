@@ -27,8 +27,13 @@
             "styles": [
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
+<<<<<<< HEAD
                  ],
 
+=======
+
+            ],
+>>>>>>> 3ffca33 (Formularios)
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
@@ -96,6 +101,10 @@
     }
   },
   "cli": {
+<<<<<<< HEAD
     "analytics": "be214379-2ab8-4363-a011-5e09a2967091"
+=======
+    "analytics": "24ed9a1f-3906-45d1-b89c-8f3dccf508ae"
+>>>>>>> 3ffca33 (Formularios)
   }
 }

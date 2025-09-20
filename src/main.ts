@@ -1,6 +1,6 @@
 import { bootstrapApplication } from '@angular/platform-browser';
+import { HeroesListComponent } from './app/heroes/heroes-list/heroes-list.component';
 import { appConfig } from './app/app.config';
-import { App } from './app/app';
 
-bootstrapApplication(App, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(HeroesListComponent, appConfig)
+  .catch(err => console.error(err));

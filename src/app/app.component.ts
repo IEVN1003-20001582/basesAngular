@@ -5,10 +5,10 @@ import { HeroesListComponent } from "./heroes/heroes-list/heroes-list.component"
 import { RouterOutlet } from '@angular/router';
 
 @Component({
- imports: [HeroesListComponent],
+ imports: [HeroesListComponent, OperasBasComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.css'
 })
 export class AppComponent {
   title = 'Israel';
@@ -23,4 +23,5 @@ export class AppComponent {
   };
 }
 import { DatePipe } from '@angular/common';
+import { OperasBasComponent } from "./formularios/operas-bas/operas-bas.component";
 

@@ -11,8 +11,10 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular/build:application",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "outputPath": "dist/bases-angular",
+            "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -27,17 +29,11 @@
             "styles": [
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
-<<<<<<< HEAD
-                 ],
-
-=======
 
             ],
->>>>>>> 3ffca33 (Formularios)
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
-
           },
           "configurations": {
             "production": {
@@ -64,7 +60,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular/build:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
               "buildTarget": "basesAngular:build:production"
@@ -76,10 +72,10 @@
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
+          "builder": "@angular-devkit/build-angular:extract-i18n"
         },
         "test": {
-          "builder": "@angular/build:karma",
+          "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "polyfills": [
               "zone.js",
@@ -94,17 +90,14 @@
             ],
             "styles": [
               "src/styles.css"
-            ]
+            ],
+            "scripts": []
           }
         }
       }
     }
   },
   "cli": {
-<<<<<<< HEAD
-    "analytics": "be214379-2ab8-4363-a011-5e09a2967091"
-=======
-    "analytics": "24ed9a1f-3906-45d1-b89c-8f3dccf508ae"
->>>>>>> 3ffca33 (Formularios)
+    "analytics": "17af7e2b-25b8-4c6b-a076-e17b2158ad20"
   }
 }

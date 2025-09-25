@@ -13,8 +13,8 @@ num1:string="";
 num2:string="";
 resultado:number=0;
 
-sumar():void{
-  this.resultado=parseInt(this.num1)+parseInt(this.num2);
+calcular():void{
+
 }
 }
 

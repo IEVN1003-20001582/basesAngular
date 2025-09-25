@@ -1,27 +1,43 @@
 <p>operas-bas works!</p>
 
-
 <form>
-  <div class="col-md-6">
+  <div class="col-6">
     <div class="mb-3">
       <div class="form-group pt-4">
-      <label for="form-label" class="form-label">Número 1:</label>
-      <input type="number" id="num1" class="form-control" [(ngModel)]="num1" name="num1">
+        <label for="num1">Número 1:</label>
+        <input type="number" class="form-control" [(ngModel)]="num1" name="num1"
+               id="num1" placeholder="Ingresa número 1">
       </div>
+
       <div class="form-group pt-4">
-      <label for="form-label" class="form-label">Número 2:</label>
-      <input type="number" id="num2" class="form-control" [(ngModel)]="num2" name="num2">
+        <label for="num2">Número 2:</label>
+        <input type="number" class="form-control" [(ngModel)]="num2" name="num2"
+               id="num2" placeholder="Ingresa número 2">
       </div>
-      <hr>
 
 
+      <input type="radio" id="option1" name="choice" value="Suma">
+  <label for="option1">Suma</label>
 
+  <input type="radio" id="option2" name="choice" value="Resta">
+  <label for="option2">Resta</label>
 
-      <button (click)="sumar()" type="submit" class="btn btn-primary">Calcular</button>
+  <input type="radio" id="option3" name="choice" value="Multiplicacion">
+  <label for="option2">Multiplicacion</label>
+
+  <input type="radio" id="option4" name="choice" value="Division">
+  <label for="option2">Division</label>
     </div>
-    <div class="col-md-6">
-      <h1>Tu resultado es:{{resultado}}</h1>
+
+
+    <button (click)="calcular()" type="button" class="btn btn-primary mt-3">Calcular</button>
+
+
+
+    <div class="col-6 mt-3">
+      <h1>Tu resultado es: {{resultado}}</h1>
     </div>
   </div>
 </form>
+
 

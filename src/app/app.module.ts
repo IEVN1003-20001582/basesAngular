@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesListComponent } from './heroes/heroes-list/heroes-list.component';
 import { FormsModule } from '@angular/forms';
+import { CinepolisComponent } from './cinepolis/cinepolis.component'
+import { ResistenciaComponent } from './resistencia/resistencia.component';
+
 
 @NgModule({
   declarations: [
@@ -21,4 +24,6 @@ export class AppModule { }
 
   bootstrap: [AppComponent]
   exports: [HeroesListComponent]
+  exports: [CinepolisComponent]
+  exports: [ResistenciaComponent]
 

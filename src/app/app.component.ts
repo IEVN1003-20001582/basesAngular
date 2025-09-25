@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { HeroesListComponent } from "./heroes/heroes-list/heroes-list.component";
+import { CinepolisComponent } from './cinepolis/cinepolis.component'
+
+
 
 
 import { RouterOutlet } from '@angular/router';
 
 @Component({
- imports: [HeroesListComponent, OperasBasComponent],
+ imports: [CinepolisComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.css'

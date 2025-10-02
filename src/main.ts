@@ -1,8 +1,8 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { HeroesListComponent } from './app/heroes/heroes-list/heroes-list.component';
 import { appConfig } from './app/app.config';
-import { CinepolisComponent } from './app/cinepolis/cinepolis.component';
-import { ResistenciaComponent } from './app/resistencia/resistencia.component';
+import { CinepolisComponent } from './app/formularios/cinepolis/cinepolis.component';
+import { ResistenciaComponent } from './app/formularios/resistencia/resistencia.component';
 
 
 bootstrapApplication(HeroesListComponent, appConfig)

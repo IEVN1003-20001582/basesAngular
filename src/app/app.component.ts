@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CinepolisComponent } from './cinepolis/cinepolis.component'
+import { CinepolisComponent } from './formularios/cinepolis/cinepolis.component'
 
 
 

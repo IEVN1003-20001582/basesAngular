@@ -1,0 +1,85 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4"> Calculadora de Resistencias</h2>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h4>1ra Banda</h4>
+      <div class="form-group">
+        <div *ngFor="let color of banda1" class="form-check">
+          <input class="form-check-input" type="radio" name="banda1" [(ngModel)]="seleccionBanda1" [value]="color" />
+          <label class="form-check-label">
+            {{ color.nombre }}
+            <span class="ms-2 d-inline-block rounded" [style.background]="color.colorHex" style="width: 20px; height: 20px;"></span>
+          </label>
+        </div>
+      </div>
+
+      <h4 class="mt-4">2da Banda</h4>
+      <div class="form-group">
+        <div *ngFor="let color of banda2" class="form-check">
+          <input class="form-check-input" type="radio" name="banda2" [(ngModel)]="seleccionBanda2" [value]="color" />
+          <label class="form-check-label">
+            {{ color.nombre }}
+            <span class="ms-2 d-inline-block rounded" [style.background]="color.colorHex" style="width: 20px; height: 20px;"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <h4>3ra Banda (Multiplicador)</h4>
+      <div class="form-group">
+        <div *ngFor="let color of banda3" class="form-check">
+          <input class="form-check-input" type="radio" name="banda3" [(ngModel)]="seleccionBanda3" [value]="color" />
+          <label class="form-check-label">
+            {{ color.nombre }}
+            <span class="ms-2 d-inline-block rounded" [style.background]="color.colorHex" style="width: 20px; height: 20px;"></span>
+          </label>
+        </div>
+      </div>
+
+      <h4 class="mt-4">Tolerancia</h4>
+      <div class="form-group">
+        <div *ngFor="let tol of tolerancias" class="form-check">
+          <input class="form-check-input" type="radio" name="tolerancia" [(ngModel)]="seleccionTolerancia" [value]="tol" />
+          <label class="form-check-label">
+            {{ tol.nombre }}
+            <span class="ms-2 d-inline-block rounded" [style.background]="tol.colorHex" style="width: 20px; height: 20px;"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-4">
+    <button class="btn btn-primary" (click)="calcular()">Calcular</button>
+  </div>
+
+  <div *ngIf="valorNominal !== null" class="mt-5">
+    <h4> Resultados</h4>
+    <table class="table table-bordered table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>Color1</th>
+          <th>Color2</th>
+          <th>Color3</th>
+          <th>Tolerancia</th>
+          <th>Valor (OHMS)</th>
+          <th>Máx (OHMS)</th>
+          <th>Mín (OHMS)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td [style.background]="seleccionBanda1.colorHex">{{ seleccionBanda1.nombre }}</td>
+          <td [style.background]="seleccionBanda2.colorHex">{{ seleccionBanda2.nombre }}</td>
+          <td [style.background]="seleccionBanda3.colorHex">{{ seleccionBanda3.nombre }}</td>
+          <td [style.background]="seleccionTolerancia.colorHex">{{ seleccionTolerancia.nombre }}</td>
+          <td>{{ valorNominal }}</td>
+          <td>{{ valorMaximo }}</td>
+          <td>{{ valorMinimo }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

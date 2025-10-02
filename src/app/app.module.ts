@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesListComponent } from './heroes/heroes-list/heroes-list.component';
 import { FormsModule } from '@angular/forms';
-import { CinepolisComponent } from './cinepolis/cinepolis.component'
-import { ResistenciaComponent } from './resistencia/resistencia.component';
+import { CinepolisComponent } from './formularios/cinepolis/cinepolis.component'
+import { ResistenciaComponent } from './formularios/resistencia/resistencia.component';
 
 
 @NgModule({
